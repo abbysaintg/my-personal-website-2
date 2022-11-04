@@ -1,0 +1,25 @@
+* {
+    
+}
+
+body {
+    
+}
+
+.column-container {
+    
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+#column-left {
+    background-color: gray;
+}
+
+#column-right {
+    background-color: pink;
+}
+
