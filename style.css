@@ -22,37 +22,38 @@ body {
 
 .column-container {
     display: flex;
-    align-items: center;
+    background-color: red;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    margin: 10px;
 }
 
 /* ----------------------- left column ----------------------- */
 
 #column-left {
-    position: relative;
-    top: 100px;
-    padding: 30px;
-    /* background-color: lightgreen; */
+    background-color: lightgreen;
 }
 
-#column-left h1 {
+/* #column-left h1 {
     letter-spacing: 2px;
     font-weight: 400;
 } 
 
 #column-left a:hover {
     color: slategray;
-}
+} */
 
 /* ----------------------- right column ----------------------- */
 
 #column-right {
-    position: relative;
-    top: 100px;
-    font-size: 6vw;
-    padding: 30px;
-    /* background-color: pink; */
+    background-color: pink;
 }
 
-#column-right a:hover {
+/* #column-right a:hover {
     font-style: italic;
-}
+} */
