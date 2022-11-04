@@ -66,20 +66,41 @@ a:hover {
 }
 
 /* ----------------------- contact - form ----------------------- */
-#back-arrow {
+#back-button {
+    margin: 20px 0px 0px 20px;
+    padding: 10px;
+    border: solid .5px #6c675d;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     color: #e0e2db;
-    font-size: 40px;
-    padding: 40px;
+    font-weight: 300;
+    background: transparent;
+    cursor: pointer;
 }
 
-#contact-me {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+#back-button:hover {
+    background: #e0e2db;
+    color: #191716;
+    transition: .5s;
+}
+
+.contact-me {
+    width: 500px;
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
     font-size: 50px;
     letter-spacing: 2px;
-    /* border: solid 2px pink; */
+}
+
+.contact-me:hover {
+    color: #e6af2e;
+    cursor: default;
+    transition: .2s ease-in-out;
 }
 
 #contact-form {
@@ -87,19 +108,19 @@ a:hover {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: auto;
 }
 
 #contact-form .input-item {
     width: 500px;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
-    border: solid .5px #6c675d;
+    border: solid 1px #424141;
     background: transparent;
 }
 
 #contact-form textarea {
     height: 200px;
+    width: 500px;
 }
 
 #contact-form ::placeholder {
