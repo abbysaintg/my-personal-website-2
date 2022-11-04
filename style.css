@@ -14,31 +14,45 @@ a:hover {
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: beige;
 }
 
 
 .column-container {
-
+    display: flex;
+    align-items: center;
 }
+
+/* ----------------------- left column ----------------------- */
 
 #column-left {
-    background-color: lightgreen;
+    position: relative;
+    top: 100px;
+    padding: 30px;
+    /* background-color: lightgreen; */
 }
 
-.header {
+#column-left h1 {
     letter-spacing: 2px;
+    font-weight: 400;
 } 
 
+#column-left a:hover {
+    color: slategray;
+}
+
+/* ----------------------- right column ----------------------- */
+
 #column-right {
-    font-size: 8vw;
-    background-color: pink;
+    position: relative;
+    top: 100px;
+    font-size: 6vw;
+    padding: 30px;
+    /* background-color: pink; */
 }
 
 #column-right a:hover {
     font-style: italic;
 }
-
-/* .nav-link {
-    padding: 10px;
-} */
