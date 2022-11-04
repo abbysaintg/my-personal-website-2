@@ -1,46 +1,44 @@
-* {
+body {
     font-family: 'Montserrat', sans-serif;
+
 }
 
 a {
     text-decoration: none;
+    font-family: 'Cardo', serif;
     color: black;
 }
 
 a:hover {
-    color: slategray;
     cursor: pointer;
 }
 
 body {
-    
+    background-color: beige;
 }
 
-main {
-
-}
 
 .column-container {
-    display: flex;
-}
 
-.column {
-    float: left;
-    width: 50%;
 }
 
 #column-left {
     background-color: lightgreen;
 }
 
+.header {
+    letter-spacing: 2px;
+} 
+
 #column-right {
-    font-family: 'Cardo', serif;
-    font-size: 10vw;
+    font-size: 8vw;
     background-color: pink;
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+#column-right a:hover {
+    font-style: italic;
 }
+
+/* .nav-link {
+    padding: 10px;
+} */
