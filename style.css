@@ -1,41 +1,65 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: #e0e2db;
-    background-color: #191716;
+    font-family: 'Montserrat', sans-serif; /* default font */
+    color: #E8E7E7; /* default font color */
+    background-color: #191716; /* default background color */
 }
 
 a {
-    text-decoration: none;
-    color: #e0e2db;
+    text-decoration: none; /* remove default link stylizing */
+    color: #E8E7E7; /* change default link color */ 
 }
 
 a:hover {
-    cursor: pointer;
+    cursor: pointer; /* change pointer style when hovering over links */
 }
 
-/* ----------------------- home - columns ----------------------- */
+/* ----------------------- external links ----------------------- */
+
+.link-animation {
+    display: inline-block; /* underline positioning for link animation */
+    position: relative; /* underline positioning for link animation */
+    transition: all .5s ease-in-out; /* transition from hover to no hover */
+}
+
+.link-animation:hover {
+    color: #e6af2e; /* new font color upon mouse hover */
+    transition: all .5s ease-in; /* transition from no hover to hover */
+}
+
+.link-animation::after {
+    content: ''; /* inserts blank text after each nav link */
+    position: absolute;
+    width: 100%; /* starting width of blank text is 0% */
+    transform: scaleX(0);
+    height: .7px; /* thickness of underline */
+    bottom: 0;
+    left: 0;
+    background: #e6af2e; /* underline color */
+    transition: transform .5s ease-in-out; /* length of animation */   
+}
+
+.link-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+/* ----------------------- home - column container ----------------------- */
 
 
 .column-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    margin: 50px;
-    top: 100px;
-    /* border: dotted 2px white; */
-}
-
-.column {
-    /* border: solid 2px white; */
-    padding: 20px;
+    display: flex; /* enable flexbox */ 
+    flex-wrap: wrap; /* when window is resized smaller the columns will stack */ 
+    justify-content: space-evenly; /* space elements evenly horizontally */ 
+    position: relative; /* enable container to be moved down */
+    margin: 100px; /* sets margin for all sides */
+    top: 80px; /* moves container down */
 }
 
 /* ----------------------- home - left column ----------------------- */
 
 #column-left {
     flex-grow: 1;
+    padding-right: 25px;
 }
 
 #column-left h1 {
@@ -48,16 +72,10 @@ a:hover {
     line-height: 200%;
 }
 
-#column-left .link-animation:hover {
-    color: #e6af2e;
-    transition: 1s;
-}
-
-
 /* ----------------------- home - right column ----------------------- */
 #column-right {
     flex-grow: 2;
-    font-family: 'Cardo', serif;
+    font-family: 'Playfair Display SC', serif;
     font-size: 7vw;
 }
 
@@ -72,14 +90,14 @@ a:hover {
     border: solid .5px #6c675d;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    color: #e0e2db;
+    color: #E8E7E7;
     font-weight: 300;
     background: transparent;
     cursor: pointer;
 }
 
 #back-button:hover {
-    background: #e0e2db;
+    background: #E8E7E7;
     color: #191716;
     transition: .5s;
 }
@@ -97,12 +115,6 @@ a:hover {
     letter-spacing: 2px;
 }
 
-.contact-me:hover {
-    color: #e6af2e;
-    cursor: default;
-    transition: .2s ease-in-out;
-}
-
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -114,37 +126,36 @@ a:hover {
     width: 500px;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
-    border: solid 1px #424141;
+    border: solid 1px #302E2D;
     background: transparent;
 }
 
 #contact-form textarea {
     height: 200px;
     width: 500px;
+    resize: none;
 }
 
 #contact-form ::placeholder {
-    color: #e0e2db;
+    color: #E8E7E7;
   }
 
 #contact-form #send-button {
     padding: 10px;
     cursor: pointer;
-    color: #e0e2db;
+    color: #E8E7E7;
 }
 
 #contact-form .input-item:hover {
-    background: #424141;
+    background: #302E2D;
     transition: .3s ease-in-out;
   }
 
 input:focus,
 textarea:focus {
     outline-width: 0;
-    color: #e0e2db;
+    color: #E8E7E7;
 }  
-
-
 
 /* ----------------------- media ----------------------- */
 
