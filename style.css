@@ -1,12 +1,13 @@
-html {
-    scroll-behavior: smooth;
-  }
-
 * { 
 	margin:0; /* reset margins */
 	padding:0; /* reset padding */
 	border:0; /* reset borders */
 }
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* scroll instead of jump when clicking on # links */
+  }
 
 body {
     font-family: 'Montserrat', sans-serif; /* default font */
@@ -26,7 +27,7 @@ a:hover {
 /* ----------------------- external links ----------------------- */
 
 .link-animation {
-    display: inline-block; /* underline positioning for link animation */
+    display: inline; /* underline positioning for link animation */
     position: relative; /* underline positioning for link animation */
     transition: all .5s ease-in-out; /* transition from hover to no hover */
 }
@@ -55,49 +56,53 @@ a:hover {
 
 /* ----------------------- page ----------------------- */
 
-.flex-page {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-    overflow: hidden;
+#page {
+    display: grid; /* est two columns */
+    grid-template-columns: 35% 65%; /* navbar is smaller, content bigger */
 }
 
-/* ----------------------- navbar ----------------------- */
+/* ----------------------- grid 1 / navbar ----------------------- */
 
 #navbar {
-    display: flex;
-    position: fixed;
-    font-family: 'Playfair Display SC', serif;
-    font-size: 5vw;
+    position: sticky; /* like fixed, but has no effect on the position of adjacenet elements */
+    top: 0; /* to make it stick to the top of the screen */
+    height: 100vh; /* make the height equal to 100 view height */ 
+    padding: 150px 50px 100px 50px; /* padding around navbar div */
 }
 
 #navbar li {
-    list-style-type: none;  
+    list-style-type: none;  /* remove bullet points */
+    font-family: 'Playfair Display SC', serif; /* change font of nav links */
+    font-size: 5vw; /* font size that scales with window */
 }
 
 #navbar a:hover {
     font-style: italic;
 }
 
-/* ----------------------- content ----------------------- */
+/* ----------------------- grid 2 / content ----------------------- */
+
 #content {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    overflow-y: scroll;
-    flex-direction: column;
-    align-content: flex-end;
-    justify-content: flex-start;
+    padding: 150px 50px 100px 50px;
+    box-sizing: content-box;
+    height: 6000px;
 }
 
 #content h1 {
     letter-spacing: 2px;
-    line-height: 25px;
-    font-weight: 400;
+    line-height: 50px;
+    font-size: 4vw;
+    font-weight: 200;
 }
 
 #content p {
-    line-height: 10px;
+    line-height: 50px;
+}
+
+/* ----------------------- section ----------------------- */
+
+section {
+    height: 600px;
 }
 
 
