@@ -2,6 +2,7 @@
 	margin:0; /* reset margins */
 	padding:0; /* reset padding */
 	border:0; /* reset borders */
+    box-sizing: border-box;
 }
 
 html {
@@ -13,6 +14,17 @@ body {
     font-family: 'Montserrat', sans-serif; /* default font */
     color: #E8E7E7; /* default font color */
     background-color: #191716; /* default background color */
+}
+
+h1 {
+    letter-spacing: 2px;
+    line-height: 90px;
+    font-size: 4vw;
+    font-weight: 200;
+}
+
+p {
+    line-height: 50px;
 }
 
 a {
@@ -67,7 +79,10 @@ a:hover {
     position: sticky; /* like fixed, but has no effect on the position of adjacenet elements */
     top: 0; /* to make it stick to the top of the screen */
     height: 100vh; /* make the height equal to 100 view height */ 
-    padding: 150px 50px 100px 50px; /* padding around navbar div */
+    padding: 0 0 0 50px;
+    display: flex;
+    align-items: center;
+    border: solid 1px #E8E7E7;
 }
 
 #navbar li {
@@ -80,73 +95,44 @@ a:hover {
     font-style: italic;
 }
 
-/* ----------------------- grid 2 / content ----------------------- */
-
-#content {
-    padding: 150px 50px 100px 50px;
-    box-sizing: content-box;
-    height: 6000px;
-}
-
-#content h1 {
-    letter-spacing: 2px;
-    line-height: 50px;
-    font-size: 4vw;
-    font-weight: 200;
-}
-
-#content p {
-    line-height: 50px;
-}
-
-/* ----------------------- section ----------------------- */
+/* ----------------------- sections ----------------------- */
 
 section {
-    height: 600px;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: solid 1px #E8E7E7;
 }
 
+/* ----------------------- section - intro ----------------------- */
 
-/* ----------------------- contact - form ----------------------- */
-#back-button {
-    margin: 20px 0px 0px 20px;
-    padding: 10px;
-    border: solid .5px #6c675d;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    color: #E8E7E7;
-    font-weight: 300;
-    background: transparent;
-    cursor: pointer;
+#intro {
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
-#back-button:hover {
-    background: #E8E7E7;
-    color: #191716;
-    transition: .5s;
+/* ----------------------- section - portfolio ----------------------- */
+
+#portfolio {
+
 }
 
-.contact-me {
-    width: 500px;
-    text-align: center;
-    margin-top: 75px;
-    margin-bottom: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    font-size: 50px;
-    letter-spacing: 2px;
+/* ----------------------- section - about ----------------------- */
+
+#about {
+
 }
 
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+/* ----------------------- section - contact ----------------------- */
+
+#contact {
+
 }
 
 #contact-form .input-item {
-    width: 500px;
+    width: 100%;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
     border: solid 1px #302E2D;
@@ -178,7 +164,7 @@ input:focus,
 textarea:focus {
     outline-width: 0;
     color: #E8E7E7;
-}  
+}   
 
 /* ----------------------- media ----------------------- */
 
