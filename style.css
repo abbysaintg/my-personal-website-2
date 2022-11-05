@@ -79,7 +79,7 @@ a:hover {
     position: sticky; /* like fixed, but has no effect on the position of adjacenet elements */
     top: 0; /* to make it stick to the top of the screen */
     height: 100vh; /* make the height equal to 100 view height */ 
-    padding: 0 0 0 100px;
+    padding-left: 100px;
     display: flex;
     align-items: center;
     /* border: solid 1px #E8E7E7; */
@@ -97,14 +97,14 @@ a:hover {
 
 /* ----------------------- grid 2 / sections ----------------------- */
 
-content {
-
-}
-
-section {
+#content section {
     height: 100vh;
-    display: block;
-    border: solid 1px #E8E7E7;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* border: solid 1px #E8E7E7; */
 }
 
 #hello {
@@ -121,10 +121,10 @@ section {
 
 #contact {
 
-}s
+}
 
 #contact-form .input-item {
-    width: 100%;
+    width: 500px;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
     border: solid 1px #302E2D;
@@ -132,7 +132,7 @@ section {
 }
 
 #contact-form textarea {
-    width: 100%;
+    width: 500px;
     height: 200px;
     resize: none;
 }
