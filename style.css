@@ -1,3 +1,13 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+* { 
+	margin:0; /* reset margins */
+	padding:0; /* reset padding */
+	border:0; /* reset borders */
+}
+
 body {
     font-family: 'Montserrat', sans-serif; /* default font */
     color: #E8E7E7; /* default font color */
@@ -43,45 +53,53 @@ a:hover {
     transform-origin: bottom center;
 }
 
-/* ----------------------- home - column container ----------------------- */
+/* ----------------------- page ----------------------- */
 
-
-.column-container {
-    display: flex; /* enable flexbox */ 
-    flex-wrap: wrap; /* when window is resized smaller the columns will stack */ 
-    justify-content: space-evenly; /* space elements evenly horizontally */ 
-    position: relative; /* enable container to be moved down */
-    margin: 100px; /* sets margin for all sides */
-    top: 80px; /* moves container down */
+.flex-page {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* ----------------------- home - left column ----------------------- */
+/* ----------------------- navbar ----------------------- */
 
-#column-left {
+#navbar {
+    display: flex;
+    position: fixed;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 5vw;
+}
+
+#navbar li {
+    list-style-type: none;  
+}
+
+#navbar a:hover {
+    font-style: italic;
+}
+
+/* ----------------------- content ----------------------- */
+#content {
+    display: flex;
+    flex-wrap: wrap;
     flex-grow: 1;
-    padding-right: 25px;
+    overflow-y: scroll;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-start;
 }
 
-#column-left h1 {
+#content h1 {
     letter-spacing: 2px;
-    line-height: 200%;
+    line-height: 25px;
     font-weight: 400;
 }
 
-#column-left p {
-    line-height: 200%;
+#content p {
+    line-height: 10px;
 }
 
-/* ----------------------- home - right column ----------------------- */
-#column-right {
-    flex-grow: 2;
-    font-family: 'Playfair Display SC', serif;
-    font-size: 7vw;
-}
-
-#column-right a:hover {
-    font-style: italic;
-}
 
 /* ----------------------- contact - form ----------------------- */
 #back-button {
