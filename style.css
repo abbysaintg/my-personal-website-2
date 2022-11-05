@@ -79,10 +79,10 @@ a:hover {
     position: sticky; /* like fixed, but has no effect on the position of adjacenet elements */
     top: 0; /* to make it stick to the top of the screen */
     height: 100vh; /* make the height equal to 100 view height */ 
-    padding: 0 0 0 50px;
+    padding: 0 0 0 100px;
     display: flex;
     align-items: center;
-    border: solid 1px #E8E7E7;
+    /* border: solid 1px #E8E7E7; */
 }
 
 #navbar li {
@@ -95,41 +95,33 @@ a:hover {
     font-style: italic;
 }
 
-/* ----------------------- sections ----------------------- */
+/* ----------------------- grid 2 / sections ----------------------- */
+
+content {
+
+}
 
 section {
     height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-content: center;
+    display: block;
     border: solid 1px #E8E7E7;
 }
 
-/* ----------------------- section - intro ----------------------- */
-
-#intro {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-}
-
-/* ----------------------- section - portfolio ----------------------- */
-
-#portfolio {
+#hello {
 
 }
-
-/* ----------------------- section - about ----------------------- */
 
 #about {
 
 }
 
-/* ----------------------- section - contact ----------------------- */
+#portfolio {
+
+}
 
 #contact {
 
-}
+}s
 
 #contact-form .input-item {
     width: 100%;
@@ -140,8 +132,8 @@ section {
 }
 
 #contact-form textarea {
+    width: 100%;
     height: 200px;
-    width: 500px;
     resize: none;
 }
 
@@ -149,8 +141,8 @@ section {
     color: #E8E7E7;
   }
 
-#contact-form #send-button {
-    padding: 10px;
+#send-button {
+    padding: 20px;
     cursor: pointer;
     color: #E8E7E7;
 }
