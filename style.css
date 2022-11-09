@@ -80,9 +80,8 @@ nav {
     top: 0; /* to make it stick to the top of the screen */
     height: 100vh; /* make the height equal to 100 view height */ 
     padding-left: 100px;
-    display: flex;
-    align-items: center;
-    /* border: solid 1px #E8E7E7; */
+    display: flex; 
+    align-items: center; /* flex and align center the navbar vertically */
 }
 
 nav li {
@@ -100,7 +99,7 @@ nav a:hover {
 /* ----------------------- grid 2 / sections ----------------------- */
 
 #content section {
-    height: 100vh;
+    height: 100vh; /* each section is 100% viewport height */
     padding: 100px;
     display: flex;
     flex-direction: column;
@@ -109,40 +108,83 @@ nav a:hover {
 }
 
 #hello {
-    border: solid 1px green;
+
 }
 
 #about {
-    border: solid 1px green;
+
 }
 
 #portfolio {
-    border: solid 1px green;
+
 }
 
 #portfolio .wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: repeat(3, 3fr);
-    grid-gap: 10px;
-    border: solid 1px green;
+    grid-template-columns: repeat(3, 1fr); /* sets up the number and width of columns */
+    grid-auto-rows: repeat(3, 1fr); /* sets up the number and width of rows */
+    grid-gap: 10px; /* pixels between rows and columns */
 }
 
 #portfolio .portfolio-div {
-    aspect-ratio: 1;
-    border: solid 1px #E8E7E7;
+    aspect-ratio: 1; /* makes grid items square */
+    /* border: solid 1px #E8E7E7; */
+    filter: grayscale(100%);
+    transition: .5s;
+    background-size: cover;
+}
+
+#portfolio .portfolio-div:hover {
+    filter: none;
+
+}
+
+#project1 {
+    background: url("https://images.unsplash.com/photo-1667295757111-b81584cbaa6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80") center center no-repeat;
+  }
+
+#project2 {
+    background: url("https://images.unsplash.com/photo-1540341913332-9579c9557a6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1148&q=80") center center no-repeat;
+  }
+  
+#project3 {
+    background: url("https://images.unsplash.com/photo-1666000980466-a42b1ac226c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center center no-repeat;
+}
+
+#project4 {
+    background: url("https://images.unsplash.com/photo-1666204564843-959409b7312e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80") center center no-repeat;
+  }
+
+#project5 {
+    background: url("https://images.unsplash.com/photo-1667337404447-abff670817aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80") center center no-repeat;
+  }
+  
+#project6 {
+    background: url("https://images.unsplash.com/photo-1652328652210-7ee90dd26f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80") center center no-repeat;
+}
+
+#project7 {
+    background: url("https://images.unsplash.com/photo-1666001511639-e569b9ea41d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80") center center no-repeat;
+  }
+
+#project8 {
+    background: url("https://images.unsplash.com/photo-1663006769697-25f812b0b8ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80") center center no-repeat;
+  }
+  
+#project9 {
+    background: url("https://images.unsplash.com/photo-1637940874530-d50d3862de93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80") center center no-repeat;
 }
 
 #contact {
-    border: solid 1px green;
+
 }
 
 #contact .wrapper {
-    border: solid 1px green;
+
 }
 
 #contact-form .input-item {
-    width: 100%;
+    width: 100%; /* will resize with page */ 
     padding: 20px; 
     font-family: 'Montserrat', sans-serif;
     border: solid 1px #302E2D;
