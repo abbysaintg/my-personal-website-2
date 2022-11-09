@@ -24,7 +24,7 @@ h1 {
 }
 
 p {
-    line-height: 50px;
+    line-height: 30px;
 }
 
 a {
@@ -75,7 +75,7 @@ a:hover {
 
 /* ----------------------- grid 1 / navbar ----------------------- */
 
-#navbar {
+nav {
     position: sticky; /* like fixed, but has no effect on the position of adjacenet elements */
     top: 0; /* to make it stick to the top of the screen */
     height: 100vh; /* make the height equal to 100 view height */ 
@@ -85,14 +85,16 @@ a:hover {
     /* border: solid 1px #E8E7E7; */
 }
 
-#navbar li {
+nav li {
     list-style-type: none;  /* remove bullet points */
     font-family: 'Playfair Display SC', serif; /* change font of nav links */
     font-size: 5vw; /* font size that scales with window */
 }
 
-#navbar a:hover {
+nav a.active,
+nav a:hover {
     font-style: italic;
+    color: #e6af2e;
 }
 
 /* ----------------------- grid 2 / sections ----------------------- */
@@ -104,6 +106,8 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    /* position: relative;
+    overflow-y: scroll; */
     /* border: solid 1px #E8E7E7; */
 }
 
