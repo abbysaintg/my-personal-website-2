@@ -1,3 +1,8 @@
+/* ---------------- PAGE REFRESH TO TOP ---------------- */
+
+// if (history.scrollRestoration) {
+//     history.scrollRestoration = 'manual';
+//   }
 
 /* ---------------- NAVBAR SCROLLSPY ---------------- */
 
@@ -24,7 +29,7 @@ window.onload = () => {
 
 // call this function everytime we scroll on the browser window
 window.onscroll = () => {
-    // amount of pixel we have scrolled downwards from the top-most point of the web page
+    // amount of pixels we have scrolled downwards from the top-most point of the web page
     let downwardScroll = window.scrollY;
     // for every <section>'s top-most point
     sectionStartingPointArray.forEach((sectionStart, sectionIndex) => {

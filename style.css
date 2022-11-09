@@ -106,9 +106,6 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    /* position: relative;
-    overflow-y: scroll; */
-    /* border: solid 1px #E8E7E7; */
 }
 
 #hello {
@@ -120,7 +117,11 @@ nav a:hover {
 }
 
 #portfolio {
+    display: grid;
+}
 
+.portfolio-div {
+    border: solid 1px #E8E7E7;
 }
 
 #contact {
