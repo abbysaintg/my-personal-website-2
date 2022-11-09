@@ -109,28 +109,41 @@ nav a:hover {
 }
 
 #hello {
-
+    border: solid 1px green;
 }
 
 #about {
-
+    border: solid 1px green;
 }
 
 #portfolio {
-    display: grid;
+    border: solid 1px green;
 }
 
-.portfolio-div {
+#portfolio .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: repeat(3, 3fr);
+    grid-gap: 10px;
+    border: solid 1px green;
+}
+
+#portfolio .portfolio-div {
+    aspect-ratio: 1;
     border: solid 1px #E8E7E7;
 }
 
 #contact {
+    border: solid 1px green;
+}
 
+#contact .wrapper {
+    border: solid 1px green;
 }
 
 #contact-form .input-item {
-    width: 500px;
-    padding: 20px;
+    width: 100%;
+    padding: 20px; 
     font-family: 'Montserrat', sans-serif;
     border: solid 1px #302E2D;
     background: transparent;
