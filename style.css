@@ -1,84 +1,63 @@
 * {
-    margin: 0;
-    /* reset margins */
-    padding: 0;
-    /* reset padding */
-    border: 0;
-    /* reset borders */
+    margin: 0; /* reset margins */
+    padding: 0; /* reset padding */
+    border: 0; /* reset borders */
     box-sizing: border-box;
+    scroll-behavior: smooth; /* scroll instead of jump when nav sections */
 }
 
 html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    /* scroll instead of jump when clicking on # links */
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    /* default font */
-    color: #E8E7E7;
-    /* default font color */
-    background-color: #191716;
-    /* default background color */
+    font-family: 'Montserrat', sans-serif; /* default font */
+    color: #E8E7E7; /* default font color */
+    background-color: #191716; /* default background color */   
 }
 
 h1 {
     letter-spacing: 2px;
     line-height: 90px;
-    font-size: 4vw;
+    font-size: 3vw;
     font-weight: 200;
 }
 
+h2 {
+    font-weight: 300;
+}
+
 p {
-    line-height: 30px;
+    line-height: 30px; /* widens gap between rows */
 }
 
 a {
-    text-decoration: none;
-    /* remove default link stylizing */
-    color: #E8E7E7;
-    /* change default link color */
+    text-decoration: none; /* remove default link stylizing */
+    color: #E8E7E7; /*  change default link color */
 }
 
 a:hover {
-    cursor: pointer;
-    /* change pointer style when hovering over links */
+    cursor: pointer; /* change pointer style when hovering over links */
 }
 
 /* ----------------------- external links ----------------------- */
 
 .link-animation {
-    /* display: inline; */
-    /* underline positioning for link animation */
-    position: relative;
-    /* underline positioning for link animation */
-    transition: all .5s ease-in-out;
-    /* transition from hover to no hover */
+    position: relative; /* underline positioning for link animation */
+    transition: all .5s ease-in-out; /* transition from hover to no hover */
 }
 
 .link-animation:hover {
-    color: goldenrod;
-    /* new font color upon mouse hover */
-    transition: all .5s ease-in;
-    /* transition from no hover to hover */
+    color: goldenrod; /* new font color upon mouse hover */
+    transition: all .5s ease-in; /* transition from no hover to hover */
 }
 
 .link-animation::after {
-    content: '';
-    /* inserts blank text after each nav link */
+    content: ''; /* inserts blank text after each nav link */
     position: absolute;
-    width: 100%;
-    /* starting width of blank text is 0% */
-    transform: scaleX(0);
-    height: .7px;
-    /* thickness of underline */
-    bottom: 0;
-    left: 0;
-    background: goldenrod;
-    /* underline color */
-    transition: transform .5s ease-in-out;
-    /* length of animation */
+    bottom: 0; /* positioning of underline */
+    left: 0; /* positioning of underline */
+    width: 100%; /* starting width of blank text is 0% */
+    height: .7px; /* thickness of underline */
+    transform: scaleX(0); 
+    background: goldenrod; /* underline color */
+    transition: transform .5s ease-in-out; /* length of animation */
 }
 
 .link-animation:hover::after {
@@ -89,47 +68,37 @@ a:hover {
 /* ----------------------- page ----------------------- */
 
 #page {
-    display: grid;
-    /* est two columns */
-    grid-template-columns: 35% 65%;
-    /* navbar is smaller, content bigger */
+    display: grid; /* establish two columns */
+    grid-template-columns: 35% 65%; /* navbar is smaller, content bigger */
 }
 
 /* ----------------------- grid 1 / navbar ----------------------- */
 
 nav {
-    position: sticky;
-    /* like fixed, but has no effect on the position of adjacenet elements */
-    top: 0;
-    /* to make it stick to the top of the screen */
-    height: 100vh;
-    /* make the height equal to 100 view height */
-    padding-left: 100px;
+    position: sticky; /* like fixed, but has no effect on the position of adjacenet elements */
+    top: 0; /* to make it stick to the top of the screen */
+    height: 100vh; /* make the height equal to 100 view height */
+    padding-left: 100px; /* keep nav bar away from left hand side */
     display: flex;
-    align-items: center;
-    /* flex and align center the navbar vertically */
+    align-items: center; /* flex and align center the navbar vertically */
 }
 
 nav li {
-    list-style-type: none;
-    /* remove bullet points */
-    font-family: 'Playfair Display SC', serif;
-    /* change font of nav links */
-    font-size: 5vw;
-    /* font size that scales with window */
+    list-style-type: none; /* remove bullet points */
+    font-family: 'Playfair Display SC', serif; /* change font of nav links */
+    font-size: 5vw; /* font size that scales with window */
 }
 
 nav a.active,
 nav a:hover {
-    font-style: italic;
-    color: goldenrod;
+    font-style: italic; /* nav links will change to italics when hovered over, and when on current section */
+    color: goldenrod; /* nav links will change color when hovered over, and when on current section */
 }
 
-/* ----------------------- grid 2 / sections ----------------------- */
+/* ----------------------- grid 2 / all sections ----------------------- */
 
 #content section {
-    height: 100vh;
-    /* each section is 100% viewport height */
+    height: 100vh; /* each section is 100% viewport height */
     padding: 100px;
     display: flex;
     flex-direction: column;
@@ -137,92 +106,106 @@ nav a:hover {
     align-content: center;
 }
 
+/* ----------------------- grid 2 / hello ----------------------- */
+
+/* ----------------------- grid 2 / about ----------------------- */
+
+/* ----------------------- grid 2 / portfolio ----------------------- */
+
 #portfolio-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* sets up the number and width of columns */
-    grid-auto-rows: repeat(3, 1fr);
-    /* sets up the number and width of rows */
-    grid-gap: 10px;
-    /* pixels between rows and columns */
+    grid-template-columns: repeat(3, 1fr); /* sets up the number and width of columns */
+    grid-auto-rows: repeat(3, 1fr); /* sets up the number and width of rows */
+    grid-gap: 10px; /* pixels between rows and columns */
 }
 
-.portfolio-div {
+.project-link {
+    position: relative;
+}
+
+.project-photo {
     aspect-ratio: 1; /* makes grid items square */
-    display: flex; /* align text within div */
-    align-items: center; /* align text within div */
-    justify-content: center; /* align text within div */
     filter: grayscale(100%); /* images initially grayscale */
-    transition: 1s;
+    transition: .5s;
     transition-timing-function: ease-in-out;
 }
 
-.portfolio-div:hover {
-    filter: none; /* removes grayscale filter upon hover */
-}
-
-.portfolio-div span {
-    font-weight: 200;
-    color: white;
-    background-color: #302E2D;
+.project-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: goldenrod;
+    background: black;
+    opacity: 80%;
     transition-duration: .5s;
     transition-timing-function: ease-in-out;
 }
 
-.portfolio-div:hover span {
-    text-shadow: none;
-    color: transparent;
-    background-color: transparent;
+.project-photo:hover {
+    filter: none; /* removes grayscale filter upon hover */
 }
 
+.project-link:hover .project-title {
+    color: transparent;
+    background: transparent;
+}
+
+/* display: flex; 
+align-items: center; 
+justify-content: center;  */
+
 #project1 {
-    background: url("https://images.unsplash.com/photo-1667295757111-b81584cbaa6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80") center center no-repeat;
+    background: url("https://images.unsplash.com/photo-1667295757111-b81584cbaa6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80") center center;
     background-size: cover;
 }
 
 #project2 {
-    background: url("https://images.unsplash.com/photo-1540341913332-9579c9557a6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1148&q=80") center center no-repeat;
+    background: url("https://images.unsplash.com/photo-1540341913332-9579c9557a6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1148&q=80") center center;
     background-size: cover;
 }
 
 #project3 {
-    background: url("https://images.unsplash.com/photo-1666000980466-a42b1ac226c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center center no-repeat;
+    background: url("https://images.unsplash.com/photo-1666000980466-a42b1ac226c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center center;
     background-size: cover;
 }
 
 #project4 {
-    background: url("https://images.unsplash.com/photo-1666204564843-959409b7312e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80") no-repeat;
+    background: url("https://images.unsplash.com/photo-1666204564843-959409b7312e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80");
     background-size: cover;
 }
 
 #project5 {
-    background: url("https://images.unsplash.com/photo-1667337404447-abff670817aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80") center center no-repeat;
+    background: url("https://images.unsplash.com/photo-1667337404447-abff670817aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80") center center;
     background-size: cover;
 }
 
 #project6 {
-    background: url("https://images.unsplash.com/photo-1652328652210-7ee90dd26f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80") center center no-repeat;
+    background: url("https://images.unsplash.com/photo-1652328652210-7ee90dd26f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80") center center;
     background-size: cover;
 }
 
 #project7 {
-    background: url("https://images.unsplash.com/photo-1663006769697-25f812b0b8ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80") center center no-repeat;
+    background: url("https://images.unsplash.com/photo-1663006769697-25f812b0b8ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80") center center;
     background-size: cover;
 }
 
 #project8 {
-    background: url("https://images.unsplash.com/photo-1666001511639-e569b9ea41d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80") no-repeat;
+    background: url("https://images.unsplash.com/photo-1666001511639-e569b9ea41d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
     background-size: cover;
 }
 
 #project9 {
-    background: url("https://images.unsplash.com/photo-1637940874530-d50d3862de93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80") no-repeat;
+    background: url("https://images.unsplash.com/photo-1637940874530-d50d3862de93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80");
     background-size: cover;
 }
 
+/* ----------------------- grid 2 / contact form ----------------------- */
+
 #contact-form .input-item {
-    width: 100%;
-    /* will resize with page */
+    width: 100%; /* will resize with page */
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
     border: solid 1px #302E2D;
