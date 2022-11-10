@@ -1,8 +1,8 @@
 /* ---------------- PAGE REFRESH TO TOP ---------------- */
 
-// if (history.scrollRestoration) {
-//     history.scrollRestoration = 'manual';
-//   }
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+  }
 
 /* ---------------- NAVBAR SCROLLSPY ---------------- */
 
